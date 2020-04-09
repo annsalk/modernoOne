@@ -356,8 +356,6 @@
             }
         }
 
-
-
     }
 
     &-images {
@@ -390,7 +388,8 @@
 
 .icosvg-1 {
     svg {
-    width: 50px;}
+    width: 50px;
+}
 
 }
 
@@ -406,8 +405,83 @@
     }
 }
 
-
-
-
-
 //end advantages
+
+//start author 
+
+.author {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 750px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &__box {
+        max-width: 650px;
+        width: 100%;
+        min-height: 215px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $green;
+    }
+
+    &__title {
+        font-size: 30px;
+        line-height: 30px;
+        color: #fff;
+        margin-right: 45px;
+        max-width: 260px;
+        span {
+            @include f700;
+        }
+
+    }
+    &__link {
+        font-size: 18px;
+        line-height: 36px;
+        padding: 14px 40px;
+        background-color: #fff;
+    }
+}
+
+//end author
+
+//start tutorial
+.tutorial {
+    padding: 70px 0 120px;
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+
+    }
+    &__item {
+        max-width: 370px;
+        width: 100%;
+    }
+}
+
+.tutorial__item{
+
+    &-images {
+        min-height: 270px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        
+
+    }
+    &-title {
+        background-color: #f8f8f8;
+        font-size: 24px;
+        text-align: center;
+        @include f700;
+        padding: 30px 10px;
+        color: $bg;
+    }
+}
+.tutorial__item-title {
+}
+
+//end tutorial
