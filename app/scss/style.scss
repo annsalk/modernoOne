@@ -393,7 +393,6 @@
             font-size: 14px;
             left: 18px;
             top: 9px;
-
         }
     }
     .login__label-name::before{
@@ -458,15 +457,9 @@
 .fancybox-button svg path {
     fill: #fff;
 }
-
-
-
-
 //end modal
 //start search
-
 .search {
-    
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -542,14 +535,14 @@
 .products {
     padding: 110px 0;
     background-color: $grey;
-
 }
-.container-fluid {
+.products__wrapper,
+.product-slider__wrapper{
+    max-width: 1920px;
+    margin: 0 auto;
 }
 .products__title {
     color: $bg;
-}
-.products__inner {
 }
 .products__inner-btn {
     text-align: center;
@@ -560,7 +553,6 @@
         background-color: #fff;
         color: $bg;
         cursor: pointer;
-
         &+button {
             margin-left: 5px;
         }
@@ -573,8 +565,13 @@
 }
 .products__inner-box {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
+    margin-left: -30px;
     flex-wrap: wrap;
+}
+.products .product__item {
+    flex-basis: calc(25% - 30px);
+    margin-left: 30px;
 }
 .product__item {
     max-width: 442px;
@@ -605,13 +602,11 @@
             
             font-size: 18px;
             display: block;
-
         }
         &-category {
             display: block;
             font-size: 14px;
             color: $green;
-
         }
 
         &-price {
@@ -1072,11 +1067,9 @@
     display: flex;
     padding-bottom: 110px;
 }
-
 .product-page__aside {
     margin-right: 30px;
 }
-
 .aside__item {
     background-color: #fff;
     border: 1px solid #dedede;
@@ -1113,14 +1106,12 @@
     }
     a {
         color: $bg;
-
     }
     span {
         color: #90a4ae;
         margin-left: 10px;
     }
 }
-
 .price-range {
     form {
         padding-top: 20px;
@@ -1137,7 +1128,6 @@
         border: none;
         cursor: pointer;
         position: relative;
-
         &::before {
             content: "\f002";
             color: #fff;
@@ -1146,29 +1136,21 @@
             position: absolute;
             left: 58px;
             top: 15px;
-
         }
-
-
     }
 }
-
 .irs-min,
 .irs-max {
     display: none;
 }
-
 .irs--flat .irs-line {
     background-color: #f5f5f8;
     height: 5px;
 }
-
 .irs--flat .irs-bar {
     background-color: $bg;
     height: 5px;
 }
-
-
 .irs--flat .irs-handle {
     width: 16px;
     height: 16px;
@@ -1176,20 +1158,15 @@
     background-color: #fff;
     border-radius: 50%;
 }
-
-
 .irs--flat .irs-handle>i:first-child {
     display: none;
 }
-
 .irs-from, .irs-single, .irs-to {
     top: 45px;
 }
-
 .irs--flat .irs-from:before, .irs--flat .irs-single:before, .irs--flat .irs-to:before {
     display: none;
 }
-
 .irs--flat .irs-from, .irs--flat .irs-single, .irs--flat .irs-to {
     background-color: transparent;
     border-radius: 0;
@@ -1198,18 +1175,13 @@
     text-shadow: none;
     line-height: 1.333;
     color: #78909c;
-
 }
-
-
 .irs--flat .irs-handle  {
     top: 19px;
 }
-
 .product-page__aside {
     .product__item-img {
         min-height: 120px;
-
     }
     .product__item-aside {
         box-shadow: none;
@@ -1229,20 +1201,16 @@
     }
     .product__item-title {
         font-size: 16px;
-
     }
     .product__item-price {
         font-size: 16px;
-
     }
-
     .product__item-starnum {
         display: none;
     }
     .rate-star {
         margin-right: 0;
     }
-
     .product__item-author .avatar {
         margin-right: 9px;
     }
@@ -1250,7 +1218,6 @@
         padding: 0;
     }
 }
-
 .aside__product-item {
     .product__item-aside:last-child {
         border-bottom: none;
@@ -1261,7 +1228,6 @@
         margin-top: 20px;
     }
 }
-
 .top-sellers__link {
     padding: 16px 10px;
     display: block;
@@ -1270,11 +1236,9 @@
     @include f500;
     text-align: center;
 }
-
 .product-page__content {
     width: 100%;
 }
-
 .product-page__filter {
     background-color: #fff;
     border: 1px solid #dedede;
@@ -1296,43 +1260,37 @@
         }
     }
 }
-
 .product-page__filter-sort {
     color: #707070;
     font-size: 14px;
     display: flex;
     align-items: center;
 }
-
 button.icon-sort-amount-desc {
     font-size: 18px;
     color: #455a64;
 }
-
 button.icon-unsorted {
     font-size: 14px;
     color: #707070;
 }
 .product-page__items {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     flex-wrap: wrap;
     margin-bottom: 30px;
+    margin-left: -30px;
 }
-
 .product-page__content {
     .product__item {
         background-color: #fff;
-        max-width: 270px;
+        flex-basis: calc(33.3333% - 30px);
         transition: all .5s;
-
+        margin-left: 30px;
     }
-
     .product__item-img {
         min-height: 180px;
-
     }
-
     .product__item-content {
         padding: 10px 20px;
 
@@ -1340,12 +1298,10 @@ button.icon-unsorted {
     .product__item-title {
         font-size: 16px;
     }
-
     .product__item-info {
         min-height: 65px;
         padding: 10px 20px;
     }
-    
     .rate-star {
         margin-right: 5px;
     }
@@ -1353,7 +1309,6 @@ button.icon-unsorted {
         padding: 0;
     }
 }
-
 .pagination__list {
     li {
         display: inline-block;
@@ -1377,18 +1332,15 @@ button.icon-unsorted {
             color: #fff;
         }
     }
-
 }
 .product__item-text {
     display: none;
 }
-
 .product__item-price {
     span {
         display: none;
     }
 }
-
 .product__item-list {
     display: none;
     .icon-comment-o,
@@ -1399,37 +1351,29 @@ button.icon-unsorted {
         padding-left: 50px;
         border-left: 1px solid #aeb4bb;
         position: relative;
-        
         span {
             color: $bg;
             @include f500;
-
         }
-
         &::before {
             font-size: 16px;
             color: $green;
             position: absolute;
             left: 20px;
             top: 0;
-
         }
-
     }
-
     .icon-comment-o {
         padding-right: 30px;
         &::before {
             top: -2px;
         }
-
     }
-    
 }
-
 .product__item {
     &.list {
         max-width: 100%;
+        flex-basis: 100%;
         .product__item-img {
             width: 240px;
             float: left;
@@ -1489,7 +1433,7 @@ button.icon-unsorted {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 16px 0;
+    padding: 16px;
 }
 .product_one-images {
     max-width: 829px;
@@ -2115,6 +2059,7 @@ button.icon-unsorted {
 //start profile
 .profile__inner {
     display: flex;
+    margin-bottom: 30px;
 }
 .profile__aside {
     margin-right: 30px;
@@ -2226,8 +2171,82 @@ button.icon-unsorted {
         color: $bg;
     }
 }
-//end profile
 
+.profile-settings {
+    .product_one-tabs.settings__tabs{
+        .tabs span {
+            font-family: 'Roboto', sans-serif !important;
+            font-weight: 500;
+            color: #707070;
+            position: relative;
+            &.active::before {
+                color: $green;
+            }
+            &::before {
+                position: absolute;
+                left: 27px;
+                font-size: 14px;
+                font-family: 'icomoon';
+                color: #d0d0d0;
+                top: 16px;
+
+            }
+        }
+    }
+
+}
+.personal-box {
+    background-color: #fff;
+    padding: 35px 40px 25px;
+    border: 1px solid #dedede;
+    }
+.personal-box__title {
+    bottom: 25px;
+    color: $bg;
+    @include f700;
+    font-size: 20px;
+}
+.personal-box__text {
+    margin-bottom: 20px;
+    p {
+        color: #707070;
+    }
+}
+.personal-box__item-head {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 16px;
+}
+.personal-box__item-name {
+    @include f500;
+    font-size: 16px;
+    color: $bg;
+    font-style: italic;
+}
+.personal-box__item-number {
+    @include f700;
+    font-size: 16px;
+    color: $bg;
+}
+.personal-box__item-line {
+    height: 15px;
+    background-color: #f4f4f4;
+    border-radius: 3px;
+    margin-bottom: 23px;
+    span {
+        display: block;
+        border-radius: 3px;
+        height: 15px;
+        background-image: url(../images/pro-bar.jpg);
+        background-repeat: repeat;
+    }
+}
+
+
+
+//end profile
+/*
+*/
 //start upload
 .upload {
 }
@@ -2271,9 +2290,7 @@ button.icon-unsorted {
         span {
             color: $green;
         }
-        &::placeholder {
-            color: #707070;
-        }
+        
     }
     select,
     input,
@@ -2284,6 +2301,9 @@ button.icon-unsorted {
         height: 40px;
         background-color: #f9f9f9;
         padding: 0 18px;
+        &::placeholder {
+            color: #707070;
+        }
     }
     textarea {
         resize: none;
@@ -2363,6 +2383,179 @@ button.icon-unsorted {
         border-left: none;
     }
 }
+
 //end upload
 
+//start withdrawals
+.withdrawals {
+}
+.container {
+}
+.withdrawals__inner {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 110px;
+}
+.withdrawals__col {
+    max-width: 570px;
+    width: 100%;
+    background-color: #fff;
+    border: 1px solid #dedede;
+    height: 100%;
+}
+.withdrawals__box {
+}
+.withdrawals__title {
+    padding: 18px 32px 24px;
+    border-bottom: 1px solid #dedede;
+    margin-bottom: 30px;
+    color: $bg;
+    @include f500;
+    font-size: 24px;
+}
+.withdrawals__content {
+    padding-left: 35px;
+    padding-right: 40px;
+    button {
+        margin-bottom: 50px;
+        color: #fff;
+        background-color: $green;
+        border: none;
+        padding: 15px 36px;
+        cursor: pointer;
+    }
+}
+.withdrawals__form-line {
+    margin-bottom: 25px;
+    label {
+        display: block;
+        width: 100%;
+        font-size: 16px;
+        color: $bg;
+        @include f500;
+        margin-bottom: 15px;
+        span {
+            color: $green;
+        }
+        
+    }
+    input, 
+    select {
+        width: 100%;
+        display: block;
+        border: 1px solid #d7d7d7;
+        height: 40px;
+        background-color: #f9f9f9;
+        padding: 0 18px;
+        &::placeholder {
+            color: #707070;
+        }
+    }
+    
+    .jq-file {
+        box-shadow: none;
+        width: 100%;
+        border-radius: 0;
+        border: 1px solid #d7d7d7;
+        background-color: #f9f9f9;
+        height: 40px;
+        padding: 0 18px;
+    }
+    .jq-file__browse {
+        top: 5px;
+        right: auto;
+        left: 9px;
+        padding: 0 12px;
+        line-height: 26px;
+        border: 1px solid #d7d7d7;
+        border-left: 1px solid #d7d7d7;
+        border-radius: 0;
+        background: #fff;
+        box-shadow: none;
+        text-shadow: none;
+        color: #444;
+    }
+
+    .jq-file__name {
+    box-sizing: border-box;
+    margin-left: 100px;
+    width: 100%;
+    height: 40px;
+    padding: 0;
+    border: none;
+    border-bottom-color: transparent;
+    border-radius: 0px;
+    background: transparent;
+    box-shadow: none;
+    font-size: 12px;
+    color: #707070;
+    line-height: 40px;
+    }
+    .jq-selectbox {
+        width: 100%;
+    }
+    .jq-selectbox__select {
+        height: 40px;
+        padding: 0 18px;
+        border: 1px solid #d7d7d7;
+        border-bottom-color: #d7d7d7;
+        border-radius: 0px;
+        background: #f9f9f9;
+        box-shadow: none;
+        font: 'Roboto-Regular', sans-serif;
+        color: #707070;
+        text-shadow: none;
+        line-height: 40px;
+    }
+    .jq-selectbox__trigger-arrow {
+        border: none;
+        top: 0;
+        right: 20px;
+        font-size: 15px;
+        &::before {
+            content: '\f0dd';
+            font-family: 'icomoon';
+        }
+    }
+    .jq-selectbox__trigger {
+        border-left: none;
+    }
+}
+.withdrawals__content-items {
+    padding-bottom: 35px;
+}
+.withdrawals__content-item {
+    display: flex;
+    height: 42px;
+    align-items: center;
+    font-size: 13px;
+    color: #444;
+    &:nth-child(odd) {
+        background-color: #f9f9f9;
+    }
+}
+.withdrawals__content-date {
+    width: 154px;
+    padding-left: 20px;
+    @include f500;
+}
+.withdrawals__content-email {
+    width: 180px;
+    @include f500;
+}
+.withdrawals__content-price {
+    width: 70px;
+    @include f700;
+}
+.withdrawals__content-status {
+    width: 88px;
+    @include f700;
+    &.withdrawals__content-paid{
+        color: $green;
+    }
+}
+
+
+
+//end withdrawals
 @import 'media';
